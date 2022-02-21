@@ -59,6 +59,23 @@
     </div>
 
     <div class="footer-bottom ">
+      <div class="container footer-bottom-items">
+
+        <div class="left">
+          <button> <a href="#">Sign-up now!</a> </button>
+        </div>
+
+        <div class="right">
+          <span>Follow us</span>
+          <a href="#"><img src="../assets/img/footer-facebook.png" alt="facebook"></a>
+          <a href="#"><img src="../assets/img/footer-twitter.png" alt="twitter"></a>
+          <a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
+          <a href="#"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a>
+          <a href="#"><img src="../assets/img/footer-periscope.png" alt="periscope"></a>
+
+        </div>
+      </div>
+      
 
     </div>
 
@@ -116,14 +133,47 @@ footer{
       }
     }
 
-    .logo{
-      
-    }
   }
 
   .footer-bottom{
     height: 150px;
     background-color: $primaryColor;
+
+    .footer-bottom-items{
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      .left button {
+        background: none;
+        border: solid 2px $secondaryColor;
+        padding: 10px;
+
+        a{
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 14px;
+          color: $tertiaryColor;
+        }
+      }
+
+      .right{
+        display: flex;
+        align-items: center;
+
+        span{
+          text-transform: uppercase;
+          color: $secondaryColor;
+          padding-right: 10px;
+          font-weight: bold;
+        }
+
+        a{
+          padding: 8px;
+        }
+      }
+    }
   }
 }
 
