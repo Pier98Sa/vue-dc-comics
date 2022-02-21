@@ -6,7 +6,10 @@
 
     <div class="Footer-right">
       <ul>
-        <li><a href="#">Characters</a></li>
+        <li v-for="(link,index) in links" :key="index">
+          <a :href="link.url" :class="(link.current)? 'active' : '' ">{{link.text}}</a>
+        </li>
+        <!--
         <li><a href="#" class="active">Comics</a></li>
         <li><a href="#">Movies</a></li>
         <li><a href="#">Tv</a></li>
@@ -16,6 +19,7 @@
         <li><a href="#">Fans</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">Shop</a></li>
+        -->
       </ul>
     </div>
 
@@ -28,6 +32,62 @@
 <script>
 export default {
   name: 'MyHeader',
+  data() {
+    return {
+      links: [
+          {
+              text: "Characters",
+              url: "#",
+              current: false,
+          },
+          {
+              text: "Comics",
+              url: "#",
+              current: true,
+          },
+          {
+              text: "Movies",
+              url: "#",
+              current: false,
+          },
+          {
+              text: "Tv",
+              url: "#",
+              current: false,
+          },
+           {
+              text: "Games",
+              url: "#",
+              current: false,
+          },
+          {
+              text: "Collectibles",
+              url: "#",
+              current: false,
+          },
+           {
+              text: "Videos",
+              url: "#",
+              current: false,
+          },
+          {
+              text: "Fans",
+              url: "#",
+              current: false,
+          },
+           {
+              text: "News",
+              url: "#",
+              current: false,
+          },
+          {
+              text: "Shop",
+              url: "#",
+              current: false,
+          }
+      ],
+    }
+  }
 }
 </script>
 
