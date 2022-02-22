@@ -1,7 +1,9 @@
 <template>
   <footer>
+    <!--footer top-->
     <div class="footer-top container">
       <div class="footer-menu">
+        <!--footer menu popolato dinamicamente con componente esterno-->
         <FooterList :title="'Dc Comics'" :items="dcComics"></FooterList>
         <FooterList :title="'Shop'" :items="shop"></FooterList>
         <FooterList :title="'Dc'" :items="dc"></FooterList>
@@ -14,6 +16,7 @@
 
     </div>
 
+    <!--Footer bottom-->
     <div class="footer-bottom ">
       <div class="container footer-bottom-items">
 

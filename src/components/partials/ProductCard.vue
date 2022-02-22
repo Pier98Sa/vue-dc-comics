@@ -1,13 +1,13 @@
 <template>
-  
-    <div class="product-card" >
-        <div class="photo-card">
-            <img :src="src" :alt="title">
-        </div>
-
-        <p>{{title}}</p>
-
+  <!--Componente per creare delle card -->
+  <div class="product-card" >
+    <div class="photo-card">
+      <img :src="src" :alt="title">
     </div>
+
+    <p>{{title}}</p>
+
+  </div>
 
 </template>
 

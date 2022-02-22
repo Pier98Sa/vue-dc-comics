@@ -1,14 +1,13 @@
 <template>
+<!--componente per creare delle liste con titolo -->
   <div class="col">
-
-      <h2>{{title}}</h2>
-      
+        <h2>{{title}}</h2>
+        
         <ul>
             <li v-for="(item, index) in items" :key="index">
                 <a :href="item.src">{{item.text}}</a>
             </li>
-        </ul>
-     
+        </ul> 
   </div>
 </template>
 

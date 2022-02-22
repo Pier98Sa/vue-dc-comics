@@ -1,25 +1,17 @@
 <template>
   <nav class="container">
-    <div class="Footer-left">
+    <!--nav sx-->
+    <div class="nav-left">
       <img src="../assets/img/dc-logo.png" alt="">
     </div>
 
-    <div class="Footer-right">
+    <!--nav dx-->
+    <div class="nav-right">
       <ul>
-        <li v-for="(link,index) in links" :key="index">
-          <a :href="link.url" :class="(link.current)? 'active' : '' ">{{link.text}}</a>
+        <!--Popolamento dinamico delle voci del menu-->
+        <li v-for="(link,index) in links" :key="index" >
+          <a :href="link.url"  @click="menuActive(index)" :class="(index == active) ? 'active':''">{{link.text}}</a>
         </li>
-        <!--
-        <li><a href="#" class="active">Comics</a></li>
-        <li><a href="#">Movies</a></li>
-        <li><a href="#">Tv</a></li>
-        <li><a href="#">Games</a></li>
-        <li><a href="#">Collectibles</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Fans</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Shop</a></li>
-        -->
       </ul>
     </div>
 
@@ -32,61 +24,59 @@
 <script>
 export default {
   name: 'MyHeader',
+  //cambio dinamico della voce del menu con la classe active al click
+  methods: {
+      menuActive(index){
+        this.active = index;
+      }
+  },
   data() {
     return {
+      active: 1,
       links: [
           {
               text: "Characters",
-              url: "#",
-              current: false,
+              url: "#"
           },
           {
               text: "Comics",
-              url: "#",
-              current: true,
+              url: "#"
           },
           {
               text: "Movies",
-              url: "#",
-              current: false,
+              url: "#"
           },
           {
               text: "Tv",
-              url: "#",
-              current: false,
+              url: "#"
           },
            {
               text: "Games",
-              url: "#",
-              current: false,
+              url: "#"
           },
           {
               text: "Collectibles",
-              url: "#",
-              current: false,
+              url: "#"
           },
            {
               text: "Videos",
-              url: "#",
-              current: false,
+              url: "#"
           },
           {
               text: "Fans",
-              url: "#",
-              current: false,
+              url: "#"
           },
            {
               text: "News",
-              url: "#",
-              current: false,
+              url: "#"
           },
           {
               text: "Shop",
-              url: "#",
-              current: false,
+              url: "#"
           }
       ],
     }
+   
   }
 }
 </script>
@@ -111,7 +101,8 @@ li{
   padding: 10px;
   
   a{
-    padding-bottom:61px ;
+    padding:0 6px 61px 6px ;
+
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;

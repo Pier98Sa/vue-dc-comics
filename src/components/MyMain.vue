@@ -5,7 +5,7 @@
       <span>Current series</span>
 
       <div class="content">
-
+        <!--Popolamento dinamico della sezione main con un componente esterno-->
         <ProductCard
           v-for="(product, index) in productList" 
           :key="index"
