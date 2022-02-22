@@ -2,7 +2,11 @@
   <footer>
     <div class="footer-top container">
       <div class="footer-menu">
-        
+        <FooterList :title="Dc-Comics" :items="dcComics"></FooterList>
+        <FooterList :title="Shop" :items="shop"></FooterList>
+        <FooterList :title="Dc" :items="dc"></FooterList>
+        <FooterList :title="Sites" :items="sites"></FooterList>
+        <!--
         <div class="col">
           <h2>Dc Comics</h2>
           <ul>
@@ -56,7 +60,7 @@
         </div>
         
         
-
+      -->
         
       </div>
 
@@ -91,8 +95,131 @@
 </template>
 
 <script>
+
+import FooterList from './partials/FooterList.vue';
 export default {
   name: 'MyFooter',
+  components:{
+    FooterList
+  },
+  data(){
+    return{
+      dcComics:[
+        {
+          src: "#",
+          text: "Characters"
+        },
+        {
+          src: "#",
+          text: "Comics"
+        },
+        {
+          src: "#",
+          text: "Movies"
+        },
+        {
+          src: "#",
+          text: "TV"
+        },
+        {
+          src: "#",
+          text: "Games"
+        },
+        {
+          src: "#",
+          text: "Videos"
+        },
+        {
+          src: "#",
+          text: "News"
+        }
+        
+      ],
+
+      shop:[
+        {
+          src: "#",
+          text: "Shop DC"
+        },
+        {
+          src: "#",
+          text: "Shop DC Collectibles"
+        }  
+      ],
+
+      dc:[
+        {
+          src: "#",
+          text: "Terms of Use"
+        },
+        {
+          src: "#",
+          text: "Privacy policy (New)"
+        },
+        {
+          src: "#",
+          text: "Ad Choices"
+        },
+        {
+          src: "#",
+          text: "Advertising"
+        },
+        {
+          src: "#",
+          text: "Jobs"
+        },
+        {
+          src: "#",
+          text: "Subscriptions"
+        },
+        {
+          src: "#",
+          text: "Talent Workshop"
+        },
+        {
+          src: "#",
+          text: "CPSC Certificates"
+        },
+        {
+          src: "#",
+          text: "Ratings"
+        },
+        {
+          src: "#",
+          text: "Shop Help"
+        },
+        {
+          src: "#",
+          text: "Contact US"
+        }
+        
+      ],
+
+      sites:[
+        {
+          src: "#",
+          text: "DC"
+        },
+        {
+          src: "#",
+          text: "MAD Magazine"
+        },
+        {
+          src: "#",
+          text: "DC Kids"
+        },
+        {
+          src: "#",
+          text: "DC Universe"
+        },
+        {
+          src: "#",
+          text: "DC Power Visa"
+        }
+        
+      ]
+    }
+  }
 }
 </script>
 
@@ -119,28 +246,7 @@ footer{
       flex-direction: column;
       flex-wrap: wrap;
 
-      .col{
-        padding: 10px;
-        
-        h2{
-          color: $tertiaryColor;
-          font-size: 20px;
-          text-transform: uppercase;
-          padding: 10px 0 10px 0;
-        }
-       
-        li{
-          list-style: none;
-
-          a{
-            text-decoration: none;
-            color: $quaternaryColor;
-            font-size: 12px;
-            padding: 10px 0 10px 0;
-          }
-
-        }
-      }
+      
 
       
 
