@@ -190,10 +190,6 @@ footer{
       flex-direction: column;
       flex-wrap: wrap;
 
-      
-
-      
-
     }
 
   }
