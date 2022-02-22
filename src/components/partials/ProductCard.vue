@@ -37,6 +37,8 @@ export default {
 
       p{
         padding-top: 10px;
+        text-transform: uppercase;
+        font-size: 12px;
       }
     }
         
