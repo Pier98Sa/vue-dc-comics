@@ -3,31 +3,10 @@
 
     <div class="container product-list" >
 
-        <div class="card" v-for="(link,index) in links" :key="index">
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-          <!--<img :src="`../assets/img/${link.img}`" alt="">-->
-          <a :href="link.url">{{link.text}}</a>
-        </div>
-
-        <!--<div class="card">
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-          <a href="#">Digital Comics</a>
-        </div>
-
-        <div class="card">
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-          <a href="#">Digital Comics</a>
-        </div>
-
-        <div class="card">
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-          <a href="#">Digital Comics</a>
-        </div>
-
-        <div class="card">
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-          <a href="#">Digital Comics</a>
-        </div> -->
+      <div class="card" v-for="(link,index) in links" :key="index">
+        <img :src="link.img" alt="">
+        <a :href="link.url">{{link.text}}</a>
+      </div>
 
     </div>
  
@@ -43,27 +22,27 @@ export default {
         {
           text: "Digital Comics",
           url: "#",
-          img: "buy-comics-digital-comics.png"
+          img: require("../assets/img/buy-comics-digital-comics.png")
         },
         {
           text: "dc merchandise",
           url: "#",
-          img: "buy-comics-merchandise.png",
+          img: require("../assets/img/buy-comics-merchandise.png")
         },
         {
           text: "subscription",
           url: "#",
-          img: "buy-comics-shop-locator.png",
+          img: require("../assets/img/buy-comics-subscriptions.png")
         },
         {
           text: "comic shop locator",
           url: "#",
-          img: "buy-comics-subscriptions.png",
+          img: require("../assets/img/buy-comics-shop-locator.png")
         },
         {
           text: "dc power visa",
           url: "#",
-          img: "buy-dc-power-visa.svg",
+          img: require("../assets/img/buy-dc-power-visa.svg")
         }
       ]
     }
@@ -82,6 +61,9 @@ export default {
 
 img{
   width: 50px;
+  height: 50px;
+  object-fit: contain;
+  
 }
 
 .product-list{
@@ -98,6 +80,7 @@ img{
       margin-left: 10px;
       text-decoration: none;
       text-transform: uppercase;
+      font-size: 13px;
       color: $tertiaryColor;
     }
   }
