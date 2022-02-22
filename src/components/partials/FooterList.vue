@@ -1,5 +1,6 @@
 <template>
   <div class="col">
+
       <h2>{{title}}</h2>
       
         <ul>
@@ -15,8 +16,8 @@
 export default {
     name: "FooterList",
     props: {
-        "title": String,
-        "items": Array
+        title: String,
+        items: Array
     }
 
 }

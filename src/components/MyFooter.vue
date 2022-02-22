@@ -2,66 +2,10 @@
   <footer>
     <div class="footer-top container">
       <div class="footer-menu">
-        <FooterList :title="Dc-Comics" :items="dcComics"></FooterList>
-        <FooterList :title="Shop" :items="shop"></FooterList>
-        <FooterList :title="Dc" :items="dc"></FooterList>
-        <FooterList :title="Sites" :items="sites"></FooterList>
-        <!--
-        <div class="col">
-          <h2>Dc Comics</h2>
-          <ul>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">News</a></li>
-          </ul>
-        </div>
-        
-        <div class="col">
-          <h2>Shop</h2>
-          <ul>
-            <li><a href="#">Shop DC</a></li>
-            <li><a href="#">Shop DC Collectibles</a></li>
-          </ul>
-        </div>
-        
-        
-        <div class="col">
-          <h2>DC</h2>
-          <ul>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy policy (New)</a></li>
-            <li><a href="#">Ad Choices</a></li>
-            <li><a href="#">Advertising</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Subscriptions</a></li>
-            <li><a href="#">Talent Workshop</a></li>
-            <li><a href="#">CPSC Certificates</a></li>
-            <li><a href="#">Ratings</a></li>
-            <li><a href="#">Shop Help</a></li>
-            <li><a href="#">Contact US</a></li>
-          </ul>
-        </div>
-       
-
-        <div class="col">
-          <h2>Sites</h2>
-          <ul>
-            <li><a href="#">DC</a></li>
-            <li><a href="#">MAD Magazine</a></li>
-            <li><a href="#">DC Kids</a></li>
-            <li><a href="#">DC Universe</a></li>
-            <li><a href="#">DC Power Visa</a></li>
-          </ul>
-  
-        </div>
-        
-        
-      -->
-        
+        <FooterList :title="'Dc Comics'" :items="dcComics"></FooterList>
+        <FooterList :title="'Shop'" :items="shop"></FooterList>
+        <FooterList :title="'Dc'" :items="dc"></FooterList>
+        <FooterList :title="'Sites'" :items="sites"></FooterList>
       </div>
 
       <div class="logo">
